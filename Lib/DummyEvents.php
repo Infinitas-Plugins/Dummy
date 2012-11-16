@@ -1,11 +1,11 @@
 <?php
-	/* 
+	/*
 	 * Short Description / title.
-	 * 
+	 *
 	 * Overview of what the file does. About a paragraph or two
-	 * 
+	 *
 	 * Copyright (c) 2010 Carl Sutton ( dogmatic69 )
-	 * 
+	 *
 	 * @filesource
 	 * @copyright Copyright (c) 2010 Carl Sutton ( dogmatic69 )
 	 * @link http://www.infinitas-cms.org
@@ -13,20 +13,20 @@
 	 * @subpackage {see_below}
 	 * @license http://www.opensource.org/licenses/mit-license.php The MIT License
 	 * @since {check_current_milestone_in_lighthouse}
-	 * 
+	 *
 	 * @author {your_name}
-	 * 
+	 *
 	 * Licensed under The MIT License
 	 * Redistributions of files must retain the above copyright notice.
 	 */
 
 	class DummyEvents extends AppEvents{
-		public function onAdminMenu($event) {
-			$id = isset($event->Handler->params['pass'][0]) ? $event->Handler->params['pass'][0] : '';
+		public function onAdminMenu(Event $Event) {
+			$id = isset($Event->Handler->params['pass'][0]) ? $Event->Handler->params['pass'][0] : '';
 
 			$menu['main']['Dashboard'] = array('plugin' => 'dummy', 'controller' => 'dummy_tables', 'action' => 'index');
 			$menu['main']['Images'] = array('plugin' => 'dummy', 'controller' => 'dummy_images', 'action' => 'index');
-			switch($event->Handler->params['controller']) {
+			switch($Event->Handler->params['controller']) {
 				case 'dummy_fields':
 					$menu['main']['Generate Data']	 = array('plugin' => 'dummy', 'controller' => 'dummy_tables', 'action' => 'generate', $id);
 					$menu['main']['Re-analyze Table'] = array('plugin' => 'dummy', 'controller' => 'dummy_tables', 'action' => 'analyze', $id);
@@ -45,11 +45,11 @@
 			return $menu;
 		}
 
-		public function onSetupRoutes() {
+		public function onSetupRoutes(Event $Event) {
 			InfinitasRouter::connect('/dummy_image/*', array('plugin' => 'dummy', 'controller' => 'dummy_images', 'action' => 'image'));
 		}
 
-		public function onSetupExtensions() {
+		public function onSetupExtensions(Event $Event) {
 			return array(
 				'png',
 				'gif',

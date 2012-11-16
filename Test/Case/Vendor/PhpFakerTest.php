@@ -1,4 +1,6 @@
 <?php
+App::import('vendor','Dummy.phpfaker/faker');
+
 /**
  * Test / examples of all the current Vendor generators
  *
@@ -8,10 +10,16 @@
 class PhpFakerTest extends CakeTestCase {
 	private $Faker = null;
 
-	public function startTest() {
-		App::import('vendor','Dummy.phpfaker/faker');
+	public function setUp() {
+		parent::setUp();
 		$this->Faker = new Faker;
 	}
+
+	public function tearDown() {
+		parent::tearDown();
+		unset($this->Faker);
+	}
+	
 	/**/
 	public function testEnglish() {
 		$E = $this->Faker->English;
