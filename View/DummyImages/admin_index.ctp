@@ -1,11 +1,11 @@
 <?php
-/* 
+/*
 	 * Short Description / title.
-	 * 
+	 *
 	 * Overview of what the file does. About a paragraph or two
-	 * 
+	 *
 	 * Copyright (c) 2010 Carl Sutton ( dogmatic69 )
-	 * 
+	 *
 	 * @filesource
 	 * @copyright Copyright (c) 2010 Carl Sutton ( dogmatic69 )
 	 * @link http://www.infinitas-cms.org
@@ -13,9 +13,9 @@
 	 * @subpackage {see_below}
 	 * @license http://www.opensource.org/licenses/mit-license.php The MIT License
 	 * @since {check_current_milestone_in_lighthouse}
-	 * 
+	 *
 	 * @author {your_name}
-	 * 
+	 *
 	 * Licensed under The MIT License
 	 * Redistributions of files must retain the above copyright notice.
 */
@@ -24,7 +24,7 @@
 	<h1>Dynamic Dummy Image Generator</h1>
 	<cite>by <a href="#about">Russell Heimlich</a> (<a href="http://www.twitter.com/kingkool68">@kingkool68</a>)</cite>
 	<div id="preview">
-		<?php 
+		<?php
 			$image = $this->Html->image('/dummy_image/900x200/000/fff/text:Infinitas');
 			echo $image, '<br/>',
 				'$this->Html->image(\'/dummy_image/900x200/000/fff/text:Infinitas\');', '<br/>',
@@ -68,7 +68,7 @@
 		</li>
 		<li>Standard image sizes are also available. See the <a href="#standards">complete list</a>.
 			<ul>
-				<li>					
+				<li>
 					<?php
 						$image = $this->Html->image('/dummy_image/qvga');
 						echo $image, '<br/>', htmlspecialchars($image);
@@ -118,173 +118,167 @@
 	</ul>
 </div>
 
-<div class="table">
-	<table class="listing" cellpadding="0" cellspacing="0">
-		<thead>
-			<tr>
-				<th>Keyword</th>
-				<th>Shortcuts</th>
-				<th>Dimensions</th>
-				<th>Regular Expression</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr><td><a href="http://dummyimage.com/mediumrectangle">mediumrectangle</a></td>
-				<td><a href="http://dummyimage.com/medrect">medrect</a></td>
-				<td>300&times;250</td>
-				<td>^(med)\w+(rec\w+)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/squarepopup">squarepopup</a></td>
-				<td><a href="http://dummyimage.com/sqrpop">sqrpop</a></td>
-				<td>250&times;250</td>
-				<td>^(s\w+pop)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/verticalrectangle">verticalrectangle</a></td>
-				<td><a href="http://dummyimage.com/vertrec">vertrec</a></td>
-				<td>240&times;400</td>
-				<td>^(ver)\w+(rec)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/largerectangle">largerectangle</a></td>
-				<td><a href="http://dummyimage.com/lrgrec">lrgrec</a></td>
-				<td>336&times;280</td>
-				<td>^(large|lrg)(rec)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/rectangle">rectangle</a></td>
-				<td><a href="http://dummyimage.com/rec">rec</a></td>
-				<td>180&times;150</td>
-				<td> ^(rec)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/popunder">popunder</a></td>
-				<td><a href="http://dummyimage.com/pop">pop</a></td>
-				<td>720&times;300</td>
-				<td>^(pop)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/fullbanner">fullbanner</a></td>
-				<td><a href="http://dummyimage.com/fullban">fullban</a></td>
-				<td>468&times;60</td>
-				<td>^(f\w+ban)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/halfbanner">halfbanner</a></td>
-				<td><a href="http://dummyimage.com/halfban">halfban</a></td>
-				<td>234&times;60</td>
-				<td>^(h\w+ban)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/microbar">microbar</a></td>
-				<td><a href="http://dummyimage.com/mibar">mibar</a></td>
-				<td>88&times;31</td>
-				<td>^(m\w+bar)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/button1">button1</a></td>
-				<td><a href="http://dummyimage.com/but1">but1</a></td>
-				<td>120&times;90</td>
-				<td>^(b\w+1)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/button2">button2</a></td>
-				<td><a href="http://dummyimage.com/but2">but2</a></td>
-				<td>120&times;60</td>
-				<td>^(b\w+2)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/verticalbanner">verticalbanner</a></td>
-				<td><a href="http://dummyimage.com/vertban">vertban</a></td>
-				<td>120&times;240</td>
-				<td>^(ver\w+ban)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/squarebutton">squarebutton</a></td>
-				<td><a href="http://dummyimage.com/sqrbut">sqrbut</a></td>
-				<td>125&times;125</td>
-				<td>^(s\w+but)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/leaderboard">leaderboard</a></td>
-				<td><a href="http://dummyimage.com/leadbrd">leadbrd</a></td>
-				<td>728&times;90</td>
-				<td>^(lea\w+rd)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wideskyscraper">wideskyscraper</a></td>
-				<td><a href="http://dummyimage.com/wiskyscrpr">wiskyscrpr</a></td>
-				<td>60&times;600</td>
-				<td>^(w\w+sk\w+r)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/skyscraper">skyscraper</a></td>
-				<td><a href="http://dummyimage.com/skyscrpr">skyscrpr</a></td>
-				<td>120&times;600</td>
-				<td>^(sk\w+r)</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/halfpage">halfpage</a></td>
-				<td><a href="http://dummyimage.com/hpge">hpge</a></td>
-				<td>300&times;600</td>
-				<td>^(h\w+g)</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table class="listing">
+	<thead>
+		<tr>
+			<th>Keyword</th>
+			<th>Shortcuts</th>
+			<th>Dimensions</th>
+			<th>Regular Expression</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td><a href="http://dummyimage.com/mediumrectangle">mediumrectangle</a></td>
+			<td><a href="http://dummyimage.com/medrect">medrect</a></td>
+			<td>300&times;250</td>
+			<td>^(med)\w+(rec\w+)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/squarepopup">squarepopup</a></td>
+			<td><a href="http://dummyimage.com/sqrpop">sqrpop</a></td>
+			<td>250&times;250</td>
+			<td>^(s\w+pop)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/verticalrectangle">verticalrectangle</a></td>
+			<td><a href="http://dummyimage.com/vertrec">vertrec</a></td>
+			<td>240&times;400</td>
+			<td>^(ver)\w+(rec)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/largerectangle">largerectangle</a></td>
+			<td><a href="http://dummyimage.com/lrgrec">lrgrec</a></td>
+			<td>336&times;280</td>
+			<td>^(large|lrg)(rec)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/rectangle">rectangle</a></td>
+			<td><a href="http://dummyimage.com/rec">rec</a></td>
+			<td>180&times;150</td>
+			<td> ^(rec)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/popunder">popunder</a></td>
+			<td><a href="http://dummyimage.com/pop">pop</a></td>
+			<td>720&times;300</td>
+			<td>^(pop)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/fullbanner">fullbanner</a></td>
+			<td><a href="http://dummyimage.com/fullban">fullban</a></td>
+			<td>468&times;60</td>
+			<td>^(f\w+ban)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/halfbanner">halfbanner</a></td>
+			<td><a href="http://dummyimage.com/halfban">halfban</a></td>
+			<td>234&times;60</td>
+			<td>^(h\w+ban)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/microbar">microbar</a></td>
+			<td><a href="http://dummyimage.com/mibar">mibar</a></td>
+			<td>88&times;31</td>
+			<td>^(m\w+bar)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/button1">button1</a></td>
+			<td><a href="http://dummyimage.com/but1">but1</a></td>
+			<td>120&times;90</td>
+			<td>^(b\w+1)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/button2">button2</a></td>
+			<td><a href="http://dummyimage.com/but2">but2</a></td>
+			<td>120&times;60</td>
+			<td>^(b\w+2)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/verticalbanner">verticalbanner</a></td>
+			<td><a href="http://dummyimage.com/vertban">vertban</a></td>
+			<td>120&times;240</td>
+			<td>^(ver\w+ban)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/squarebutton">squarebutton</a></td>
+			<td><a href="http://dummyimage.com/sqrbut">sqrbut</a></td>
+			<td>125&times;125</td>
+			<td>^(s\w+but)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/leaderboard">leaderboard</a></td>
+			<td><a href="http://dummyimage.com/leadbrd">leadbrd</a></td>
+			<td>728&times;90</td>
+			<td>^(lea\w+rd)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wideskyscraper">wideskyscraper</a></td>
+			<td><a href="http://dummyimage.com/wiskyscrpr">wiskyscrpr</a></td>
+			<td>60&times;600</td>
+			<td>^(w\w+sk\w+r)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/skyscraper">skyscraper</a></td>
+			<td><a href="http://dummyimage.com/skyscrpr">skyscrpr</a></td>
+			<td>120&times;600</td>
+			<td>^(sk\w+r)</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/halfpage">halfpage</a></td>
+			<td><a href="http://dummyimage.com/hpge">hpge</a></td>
+			<td>300&times;600</td>
+			<td>^(h\w+g)</td>
+		</tr>
+	</tbody>
+</table>
 
-<div class="table">
-	<table class="listing" cellpadding="0" cellspacing="0">
-		<thead>
-			<tr>
-				<th>Keyword</th>
-				<th>Dimensions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr><td><a href="http://dummyimage.com/cga">cga</a></td>
-				<td>320x200</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/qvga">qvga</a></td>
-				<td>320x240</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/vga">vga</a></td>
-				<td>640x480</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wvga">wvga</a></td>
-				<td>800x480</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/svga">svga</a></td>
-				<td>800x480</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wsvga">wsvga</a></td>
-				<td>1024x600</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/xga">xga</a></td>
-				<td>1024x768</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wxga">wxga</a></td>
-				<td>1280x800</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wsxga">wsxga</a></td>
-				<td>1440x900</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wuxga">wuxga</a></td>
-				<td>1920x1200</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/wqxga">wqxga</a></td>
-				<td>2560x1600</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table class="listing">
+	<thead>
+		<tr>
+			<th>Keyword</th>
+			<th>Dimensions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td><a href="http://dummyimage.com/cga">cga</a></td>
+			<td>320x200</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/qvga">qvga</a></td>
+			<td>320x240</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/vga">vga</a></td>
+			<td>640x480</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wvga">wvga</a></td>
+			<td>800x480</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/svga">svga</a></td>
+			<td>800x480</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wsvga">wsvga</a></td>
+			<td>1024x600</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/xga">xga</a></td>
+			<td>1024x768</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wxga">wxga</a></td>
+			<td>1280x800</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wsxga">wsxga</a></td>
+			<td>1440x900</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wuxga">wuxga</a></td>
+			<td>1920x1200</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/wqxga">wqxga</a></td>
+			<td>2560x1600</td>
+		</tr>
+	</tbody>
+</table>
 
-<div class="table">
-	<table class="listing" cellpadding="0" cellspacing="0">
-		<thead>
-			<tr>
-				<th>Keyword</th>
-				<th>Dimensions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr><td><a href="http://dummyimage.com/ntsc">ntsc</a></td>
-				<td>720x480</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/pal">pal</a></td>
-				<td>768x576</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/hd720">hd720</a></td>
-				<td>1280x720</td>
-			</tr>
-			<tr><td><a href="http://dummyimage.com/hd1080">hd1080</a></td>
-				<td>1920x1080</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<table class="listing">
+	<thead>
+		<tr>
+			<th>Keyword</th>
+			<th>Dimensions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td><a href="http://dummyimage.com/ntsc">ntsc</a></td>
+			<td>720x480</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/pal">pal</a></td>
+			<td>768x576</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/hd720">hd720</a></td>
+			<td>1280x720</td>
+		</tr>
+		<tr><td><a href="http://dummyimage.com/hd1080">hd1080</a></td>
+			<td>1920x1080</td>
+		</tr>
+	</tbody>
+</table>

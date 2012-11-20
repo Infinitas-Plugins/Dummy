@@ -32,7 +32,7 @@ and set to generate <strong><?php echo $data['DummyTable']['number'];?></strong>
 if (sizeof($data['DummyTable']['contents'])) { ?>
 	<br />
 	<br />
-	<table cellpadding="0" cellspacing="0" style='width: auto'>
+	<table style='width: auto'>
 		<thead>
 			<tr>
 	<?php		
