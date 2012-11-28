@@ -11,7 +11,7 @@
  */
 class Number extends Faker {
 	public function __construct() {	}
-	public function &__get($var) { return $this->$var();	}
+	public function __get($var) { return $this->$var();	}
 
 
 	public static function integer($options = array()) {

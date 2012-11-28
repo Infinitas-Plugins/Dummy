@@ -16,7 +16,7 @@ class Uk extends Address {
 
 	public function __construct() {}
 
-	public function &__get( $var ) {
+	public function __get( $var ) {
 		return $this->$var();
 	}
 

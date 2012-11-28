@@ -2,10 +2,10 @@
 
 /**
  * Class for generating fake data
- * 
+ *
  * This version of faker has significantly broken off from original project, but
  * it's methods are highly inspired by the Php-Faker by Caius Durling.
- * 
+ *
  * @license MIT
  * @author Caius Durling
  * @author ifunk
@@ -16,18 +16,18 @@
  */
 class Faker
 {
-	
+
 	public static $_instances = array();
-	
+
 	public function __construct()
 	{
 	}
-	
+
 	public function __tostring() {
 		return "";
 	}
-		
-	public function &__get( $var ) {
+
+	public function __get( $var ) {
 		if (empty(self::$_instances[$var])) {
 			$filename = "lib/".strtolower($var).".php";
 			include $filename;
@@ -36,21 +36,21 @@ class Faker
 		}
 		return self::$_instances[$var];
 	}
-	
+
 	// todo: use __autoload()
-	
+
 	/**
 	 * Returns a random element from a passed array
 	 *
-	 * @param array $array 
+	 * @param array $array
 	 * @return string
 	 * @author Caius Durling
-	 */	
+	 */
 	protected function random(&$array)
 	{
 		return $array[mt_rand(0, count($array)-1)];
 	}
-	
+
 	/**
 	 * Returns a random number between 0 and 9
 	 *
@@ -61,7 +61,7 @@ class Faker
 	{
 		return mt_rand(0, 9);
 	}
-	
+
 	/**
 	 * Returns a random letter from a to z
 	 *
@@ -74,7 +74,7 @@ class Faker
 	}
 
 	public static function generate_random_num_str($str) {
-		// loop through each character and convert all unescaped X's to 1-9 and 
+		// loop through each character and convert all unescaped X's to 1-9 and
 		// unescaped x's to 0-9.
 		$new_str = "";
 		for ($i = 0; $i < strlen($str); $i++) {
@@ -93,15 +93,15 @@ class Faker
 			else
 				$new_str .= $str[$i];
 		}
-		
+
 		return trim($new_str);
 	}
 	public static function generate_random_alphanumeric_str($str) {
 		$letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		$consonants = "BCDFGHJKLMNPQRSTVWXYZ";
 		$vowels = "AEIOU";
-		
-		// loop through each character and convert all unescaped X's to 1-9 and 
+
+		// loop through each character and convert all unescaped X's to 1-9 and
 		// unescaped x's to 0-9.
 		$new_str = "";
 		for ($i = 0; $i < strlen($str); $i++) {
@@ -113,7 +113,7 @@ class Faker
 				case "x":
 					$new_str .= rand(0, 9);
 				break;
-				
+
 				// Letters
 				case "L":
 					$new_str .= $letters[rand(0, strlen($letters) - 1)];
@@ -128,7 +128,7 @@ class Faker
 					else
 						$new_str .= strtolower($letters[rand(0, strlen($letters) - 1)]);
 				break;
-				
+
 				// Consonants
 				case "C":
 					$new_str .= $consonants[rand(0, strlen($consonants) - 1)];
@@ -143,7 +143,7 @@ class Faker
 					else
 						$new_str .= strtolower($consonants[rand(0, strlen($consonants) - 1)]);
 				break;
-				
+
 				// Vowels
 				case "V":
 					$new_str .= $vowels[rand(0, strlen($vowels) - 1)];
@@ -158,14 +158,14 @@ class Faker
 					else
 						$new_str .= strtolower($vowels[rand(0, strlen($vowels) - 1)]);
 				break;
-				
+
 				default:
 					$new_str .= $str[$i];
 				break;
 			}
 		}
-		
+
 		return trim($new_str);
-	}	
+	}
 }
 ?>

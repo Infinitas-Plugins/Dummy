@@ -25,7 +25,7 @@ class Name extends Faker
 	{
 	}
 
-	public function &__get($var)
+	public function __get($var)
 	{
 		return $this->$var();
 	}
