@@ -46,7 +46,7 @@ class Faker
 	 * @return string
 	 * @author Caius Durling
 	 */
-	protected function random(&$array)
+	protected static function random(&$array)
 	{
 		return $array[mt_rand(0, count($array)-1)];
 	}
